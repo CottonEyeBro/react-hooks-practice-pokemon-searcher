@@ -18,14 +18,14 @@ function PokemonPage() {
   }, [])
 
   const filteredPokeArr = pokeArr.filter((card) => (
-    card.name.toLowerCase().includes(searchPoke.toLowerCase())
+    card.name.toLowerCase().includes(searchPoke.toLowerCase()) || card.hp.toString().includes(searchPoke) // Adds an "or" conditional to both search for card.name as well as card.hp
   ))
 
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm setPokeArr={setPokeArr} />
       <br />
       <Search setSearchPoke={setSearchPoke} />
       <br />

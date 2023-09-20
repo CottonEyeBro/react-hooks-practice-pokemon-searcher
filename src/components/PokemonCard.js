@@ -16,7 +16,7 @@ function PokemonCard( {name, hp, sprites} ) {
     <Card>
       <div onClick={handleClick}>
         <div className="image">
-          <img src={imageSrc} alt="oh no!" />
+          <img src={imageSrc} alt="Who's that Pokemon?" title={name} />
         </div>
         <div className="content">
           <div className="header">{name}</div>
